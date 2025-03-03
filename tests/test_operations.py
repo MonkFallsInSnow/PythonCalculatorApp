@@ -1,5 +1,5 @@
 import pytest # had to change interpreter to point at the one in .venv
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide, power
 
 def test_add():
     assert add(1, 2) == 3
@@ -16,3 +16,6 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
+
+def test_power():
+    assert power(2, 3) == 8
